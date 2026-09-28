@@ -19,3 +19,4 @@ function isInvalidInput(str) {   //   to filter exponential notation
 }
 console.log(isInvalidInput("1e3"); // for testing isInvalidInput
 
+step 36 ---->
