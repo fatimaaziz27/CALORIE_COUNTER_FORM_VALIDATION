@@ -14,6 +14,6 @@ function cleanInputString(str) {   // func for wrong input
 // console.log(cleanInputString("+-99"));    // for testing cleanInputString func
 
 function isInvalidInput(str) {   //   to filter exponential notation
- const regex = /e/i;
+ const regex = /\d+e\d+/i;
+ return str.match(regex);
 }
-
