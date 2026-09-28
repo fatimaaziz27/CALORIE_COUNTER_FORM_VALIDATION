@@ -17,3 +17,5 @@ function isInvalidInput(str) {   //   to filter exponential notation
  const regex = /\d+e\d+/i;
  return str.match(regex);
 }
+console.log(isInvalidInput("1e3");
+
