@@ -22,3 +22,7 @@ function isInvalidInput(str) {   //   to filter exponential notation
 // console.log(isInvalidInput("1e3"); // for testing isInvalidInput
 // console.log(isInvalidInput("10");
 
+function addEntry(){
+ 
+}
+
