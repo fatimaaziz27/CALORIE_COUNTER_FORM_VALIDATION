@@ -23,6 +23,9 @@ function isInvalidInput(str) {   //   to filter exponential notation
 // console.log(isInvalidInput("10");
 
 function addEntry(){
- 
+ const targetId = '#' + entryDropdown;
+ const targetInputContainer = document.querySelector(`${entryDropdown.value} .input-container`);
+ entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
+ HTMLstring = `<label>Entry ${entryNumber} Name</label>`;
 }
 
