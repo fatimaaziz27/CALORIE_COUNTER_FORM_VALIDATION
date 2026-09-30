@@ -26,6 +26,12 @@ function addEntry(){
  const targetId = '#' + entryDropdown;
  const targetInputContainer = document.querySelector(`${entryDropdown.value} .input-container`);
  entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
- HTMLstring = `<label>Entry ${entryNumber} Name</label>`;
+ 
+ HTMLstring = 
+  `<label for = "${entryDropdown.value}-${entryNumber}-name"> Entry ${entryNumber} Name</label>
+   <input type="text" id="${entryDropdown.value}-${entryNumber}-name" placeholder="Name" />
+   <label for = "${entryDropdown.value}-${entryNumber}-calories"> Entry ${entryNumber} calories</label>`
+  <input type="number" min="0" id="${entryDropdown.value}-${entryNumber}-name" placeholder="Name" />
+  ;
 }
 
