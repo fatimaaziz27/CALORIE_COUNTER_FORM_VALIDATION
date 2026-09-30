@@ -33,4 +33,4 @@ function addEntry(){
  
  targetInputContainer.innerHTML += HTMLString;
 }
-
+button.addEntryButton("click",addEntry);
