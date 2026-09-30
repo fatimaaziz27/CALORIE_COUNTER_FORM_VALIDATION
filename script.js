@@ -23,7 +23,7 @@ function isInvalidInput(str) {   //   to filter exponential notation
 function addEntry(){
  const targetId = '#' + entryDropdown;
  const targetInputContainer = document.querySelector(`${entryDropdown.value} .input-container`);
- entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
+ entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length + 1;
  
  HTMLstring = 
   `<label for = "${entryDropdown.value}-${entryNumber}-name"> Entry ${entryNumber} Name</label>
@@ -31,6 +31,6 @@ function addEntry(){
    <label for = "${entryDropdown.value}-${entryNumber}-calories"> Entry ${entryNumber} calories</label>
   <input type="number" min="0" id="${entryDropdown.value}-${entryNumber}-calories" placeholder="Calories" />`;
  
- targetInputContainer.innerHTML += HTMLString;
+ targetInputContainer.insertAdjacentHTML();
 }
 addEntryButton.addEventListener("click",addEntry);
