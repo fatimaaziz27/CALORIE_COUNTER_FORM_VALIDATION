@@ -37,5 +37,8 @@ addEntryButton.addEventListener("click",addEntry);
 
 getCaloriesFromInputs(list){
  let calories = 0;
+ for (const item of list) {
+  const currVal = item.value;
+}
  // Step 57 ---->
 }
