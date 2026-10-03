@@ -36,5 +36,6 @@ function addEntry(){
 addEntryButton.addEventListener("click",addEntry);
 
 getCaloriesFromInputs(list){
+ let calories = 0;
  // Step 57 ---->
 }
