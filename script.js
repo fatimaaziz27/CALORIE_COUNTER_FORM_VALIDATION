@@ -55,7 +55,7 @@ function getCaloriesFromInputs(list) {
   if (invalidInputMatch){
    alert(`Invalid Input: ${invalidInputMatch[0]}`);
    const 
-   let isError = true;
+   isError = true;
    return null;
   }
    calories += Num(currVal);
@@ -66,4 +66,7 @@ function getCaloriesFromInputs(list) {
 
 
 
-function calculateCalories(){}
+function calculateCalories(e){
+ e.preventDefault();
+ isError = false;
+}
