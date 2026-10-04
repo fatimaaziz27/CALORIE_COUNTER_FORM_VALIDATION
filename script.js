@@ -42,6 +42,7 @@ getCaloriesFromInputs(list){
   const currVal = cleanInputString(item.value);
   const invalidInputMatch = isInvalidInput(currVal);
   if (invalidInputMatch){
+   alert(`Invalid Input: ${`invalidInputMatch[0]}`);
    // Step 64 -------->>>>
   }
 }
