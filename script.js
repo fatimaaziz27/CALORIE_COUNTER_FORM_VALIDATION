@@ -49,7 +49,7 @@ getCaloriesFromInputs(list) {
    let isError = true;
    return null;
   }
-  
    calories += Num(currVal);
  }
+ return calories;
 }
