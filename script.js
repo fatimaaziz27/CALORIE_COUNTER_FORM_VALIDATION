@@ -69,4 +69,10 @@ function getCaloriesFromInputs(list) {
 function calculateCalories(e){
  e.preventDefault();
  isError = false;
+ 
+ const breakfastNumberInputs = document.querySelectorAll("#breakfast input[type='number']");
+ const lunchNumberInputs = document.querySelectorAll("#lunch input[type='number']");
+ const lunchNumberInputs = document.querySelectorAll("#dinner input[type='number']");
+ const lunchNumberInputs = document.querySelectorAll("#snacks input[type='number']");
+ const lunchNumberInputs = document.querySelectorAll("#exercise input[type='number']");
 }
