@@ -33,17 +33,23 @@ function addEntry(){
  
  targetInputContainer.insertAdjacentHTML('beforeend', HTMLString);
 }
+
 addEntryButton.addEventListener("click",addEntry);
 
-getCaloriesFromInputs(list){
+getCaloriesFromInputs(list) {
  let calories = 0;
  
  for (const item of list) {
   const currVal = cleanInputString(item.value);
   const invalidInputMatch = isInvalidInput(currVal);
+  
   if (invalidInputMatch){
-   alert(`Invalid Input: ${`invalidInputMatch[0]}`);
-   // Step 64 -------->>>>
+   alert(`Invalid Input: ${invalidInputMatch[0]}`);
+   const 
+   let isError = true;
+   return null;
   }
-}
+  
+   calories += Num(currVal);
+ }
 }
