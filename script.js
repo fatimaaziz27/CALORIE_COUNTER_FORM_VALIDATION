@@ -33,10 +33,10 @@ function addEntry(){
  entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length + 1;
  
  HTMLstring = 
-  `<label for = "${entryDropdown.value}-${entryNumber}-name"> Entry ${entryNumber} Name</label>
+  `<label for = "${entryDropdown.value}-${entryNumber}-name"> Entry ${entryNumber} Name</label>   
    <input type="text" id="${entryDropdown.value}-${entryNumber}-name" placeholder="Name" />
    <label for = "${entryDropdown.value}-${entryNumber}-calories"> Entry ${entryNumber} calories</label>
-  <input type="number" min="0" id="${entryDropdown.value}-${entryNumber}-calories" placeholder="Calories" />`;
+  <input type="number" min="0" id="${entryDropdown.value}-${entryNumber}-calories" placeholder="Calories" />`;   // template literal
  
  targetInputContainer.insertAdjacentHTML('beforeend', HTMLString);
 }
@@ -92,6 +92,6 @@ function calculateCalories(e){
  
  const surplusOrDeficit = remainingCalories < 0 ? 'Surplus' : 'Deficit';  // with ternary operator 
 
- output.innerHTML = ``; // template literal 
+ output.innerHTML = `<span class= "${surplusOrDeficit.toLowerCase()}"></span>`; // template literal 
  
 }
