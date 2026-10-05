@@ -92,6 +92,6 @@ function calculateCalories(e){
  
  const surplusOrDeficit = remainingCalories < 0 ? 'Surplus' : 'Deficit';  // with ternary operator 
 
- output.innerHTML = ``;
+ output.innerHTML = ``; // template literal 
  
 }
