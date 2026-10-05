@@ -90,6 +90,8 @@ function calculateCalories(e){
  const consumedCalories = breakfastCalories + lunchCalories + dinnerCalories + snacksCalories;
  const remainingCalories = consumedCalories - budgetCalories + exerciseCalories;
  
- const surplusOrDeficit = remainingCalories < 0 ? 'Surplus' : 'Deficit';
+ const surplusOrDeficit = remainingCalories < 0 ? 'Surplus' : 'Deficit';  // with ternary operator 
+
+ output.innerHTML = ``;
  
 }
