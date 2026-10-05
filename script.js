@@ -8,6 +8,8 @@ const output = document.getElementById('output');
 let isError = false;
 
 
+
+
 function cleanInputString(str) {   // func for wrong input
  // console.log("original string: ",str);    // for testing cleanInputString func 
  const regex = /[+-\s]/g;  // variable for replacement of + - and space
