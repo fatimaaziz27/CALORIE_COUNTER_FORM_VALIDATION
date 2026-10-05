@@ -4,9 +4,8 @@ const entryDropdown = document.getElementById('entry-dropdown');
 const addEntryButton = document.getElementById('add-entry');
 const clearButton = document.getElementById('clear');
 const output = document.getElementById('output');
+
 let isError = false;
-
-
 
 
 function cleanInputString(str) {   // func for wrong input
@@ -93,5 +92,7 @@ function calculateCalories(e){
  const surplusOrDeficit = remainingCalories < 0 ? 'Surplus' : 'Deficit';  // with ternary operator 
 
  output.innerHTML = `<span class= "${surplusOrDeficit.toLowerCase()}"> ${Math.abs(remainingCalories)} Calorie ${surplusOrDeficit} </span> <hr>`; // template literal 
+ 
  // Step 86 -------->>>
+ 
 }
