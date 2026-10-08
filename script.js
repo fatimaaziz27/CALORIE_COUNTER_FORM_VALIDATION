@@ -100,7 +100,5 @@ function calculateCalories(e){
 	 <p Calories Budgeted: ${budgetCalories}</p>
 	 <p Calories Consumed: ${consumedCalories}</p>
 	 <p Calories Burned: ${exerciseCalories}</p>`; // template literal 
-	 // Step 86 -------->>>
-
-	
+	 output.classList.remove('hide');
 }
