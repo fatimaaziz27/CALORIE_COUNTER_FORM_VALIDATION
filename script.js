@@ -103,12 +103,8 @@ function calculateCalories(e){
 	 output.classList.remove('hide');
 }
 
-
-
-
 addEntryButton.addEventListener("click", addEntry);
 calorieCounter.addEventListener("submit", calculateCalories);
-
 
 
 
