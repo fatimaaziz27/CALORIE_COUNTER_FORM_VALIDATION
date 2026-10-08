@@ -108,3 +108,11 @@ function calculateCalories(e){
 
 addEntryButton.addEventListener("click", addEntry);
 calorieCounter.addEventListener("submit", calculateCalories);
+
+
+
+
+
+function clearForm(){
+	
+}
