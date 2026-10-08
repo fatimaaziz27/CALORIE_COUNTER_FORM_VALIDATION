@@ -95,8 +95,11 @@ function calculateCalories(e){
 	 
 	 const surplusOrDeficit = remainingCalories < 0 ? 'Surplus' : 'Deficit';  // with ternary operator 
 	
-	 output.innerHTML = `<span class= "${surplusOrDeficit.toLowerCase()}"> ${Math.abs(remainingCalories)} Calorie ${surplusOrDeficit} </span> <hr>
-	 <p Calories Budgeted: ${budgetCalories}</p>`; // template literal 
+	 output.innerHTML = `<span class= "${surplusOrDeficit.toLowerCase()}"> ${Math.abs(remainingCalories)} Calorie ${surplusOrDeficit} </span>
+	 <hr>
+	 <p Calories Budgeted: ${budgetCalories}</p>
+	 <p Calories Consumed: ${consumedCalories}</p>
+	 <p Calories Burned: ${exerciseCalories}</p>`; // template literal 
 	 // Step 86 -------->>>
 
 	
