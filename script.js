@@ -102,3 +102,9 @@ function calculateCalories(e){
 	 <p Calories Burned: ${exerciseCalories}</p>`; // template literal 
 	 output.classList.remove('hide');
 }
+
+
+
+
+addEntryButton.addEventListener("click", addEntry);
+calorieCounter.addEventListener("submit", calculateCalories);
