@@ -14,8 +14,6 @@ The project also focuses on validating form inputs and handling invalid user ent
 
 * DOM Manipulation
 * Event Handling
-* Functions
-* Variables
 * Arrays
 * Objects
 * Conditional Statements
