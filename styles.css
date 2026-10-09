@@ -1,12 +1,12 @@
 :root {
   --light-grey: #f5f6f7;
-  --dark-blue: #0a0a23;
-  --fcc-blue: #1b1b32;
-  --light-yellow: #fecc4c;
-  --dark-yellow: #feac32;
-  --light-pink: #ffadad;
-  --dark-red: #850000;
-  --light-green: #acd157;
+  --dark-blue: #020202;
+  --fcc-blue: #000000;
+  --light-yellow: #dac23c;
+  --dark-yellow: #d6b704;
+  --light-pink: #a10f0f;
+  --dark-red: #a10f0f;
+  --light-green: #77a30f;
 }
 
 body {
