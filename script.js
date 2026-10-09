@@ -13,7 +13,7 @@ let isError = false;
 function cleanInputString(str) {   // func for wrong input
 	 // console.log("original string: ",str);    // for testing cleanInputString func 
 	 const regex = /[+-\s]/g;  // variable for replacement of + - and space
-	 return str.replace(/regex/g,'');  // return of + - and space as empty char ('') 
+	 return str.replace(regex,'');  // return of + - and space as empty char ('') 
 }
 // console.log(cleanInputString("+-99"));    // for testing cleanInputString func
 
@@ -24,29 +24,35 @@ function isInvalidInput(str) {   //   to filter exponential notation
 	 const regex = /\d+e\d+/i;
 	 return str.match(regex);
 }
+
 // console.log(isInvalidInput("1e3"); // for testing isInvalidInput
 // console.log(isInvalidInput("10");
 
 
 
 
-function addEntry(){
- 
-	 const targetId = '#' + entryDropdown;
-	 
-	 const targetInputContainer = document.querySelector(`${entryDropdown.value} .input-container`);
-	 entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length + 1;   // template literal
-	 
-	 HTMLstring = 
-	  `<label for = "${entryDropdown.value}-${entryNumber}-name"> Entry ${entryNumber} Name</label>   
-	   <input type="text" id="${entryDropdown.value}-${entryNumber}-name" placeholder="Name" />
-	   <label for = "${entryDropdown.value}-${entryNumber}-calories"> Entry ${entryNumber} calories</label>
-	  <input type="number" min="0" id="${entryDropdown.value}-${entryNumber}-calories" placeholder="Calories" />`;   // template literal
-	 
-	 targetInputContainer.insertAdjacentHTML('beforeend', HTMLString);
-}
+function addEntry() {
+  const targetInputContainer = document.querySelector(
+    `#${entryDropdown.value} .input-container`
+  );
 
-addEntryButton.addEventListener("click",addEntry);
+  const entryNumber =
+    targetInputContainer.querySelectorAll('input[type="text"]').length + 1;
+
+  const HTMLstring = `
+    <label for="${entryDropdown.value}-${entryNumber}-name">
+      Entry ${entryNumber} Name
+    </label>
+    <input type="text" id="${entryDropdown.value}-${entryNumber}-name" placeholder="Name" />
+
+    <label for="${entryDropdown.value}-${entryNumber}-calories">
+      Entry ${entryNumber} Calories
+    </label>
+    <input type="number" min="0" id="${entryDropdown.value}-${entryNumber}-calories" placeholder="Calories" />
+  `;
+
+  targetInputContainer.insertAdjacentHTML("beforeend", HTMLstring);
+}
 
 
 
@@ -63,7 +69,7 @@ function getCaloriesFromInputs(list) {
 	   isError = true;
 	   return null;
 	  }
-	   calories += Num(currVal);
+	   calories += Number(currVal);
 	 }
 	 return calories;
 }
@@ -98,15 +104,16 @@ function calculateCalories(e){
 	 
 	 const surplusOrDeficit = remainingCalories < 0 ? 'Surplus' : 'Deficit';  // with ternary operator 
 	
-	 output.innerHTML = `<span class= "${surplusOrDeficit.toLowerCase()}"> ${Math.abs(remainingCalories)} Calorie ${surplusOrDeficit} </span>
-	 <hr>
-	 <p Calories Budgeted: ${budgetCalories}</p>
-	 <p Calories Consumed: ${consumedCalories}</p>
-	 <p Calories Burned: ${exerciseCalories}</p>`; // template literal 
-	 output.classList.remove('hide');
+	 output.innerHTML = `<span class="${surplusOrDeficit.toLowerCase()}"> ${Math.abs(remainingCalories)} Calorie ${surplusOrDeficit} </span>
+  	<hr>
+  	<p>Calories Budgeted: ${budgetCalories}</p>
+  	<p>Calories Consumed: ${consumedCalories}</p>
+ 	<p>Calories Burned: ${exerciseCalories}</p> `; // template literal 
+	
+ 	 output.classList.remove('hide');
 }
 
-addEntryButton.addEventListener("click", addEntry);
+// addEntryButton.addEventListener("click", addEntry);
 calorieCounter.addEventListener("submit", calculateCalories);
 
 
